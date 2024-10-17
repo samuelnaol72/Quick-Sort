@@ -94,6 +94,7 @@ size_t partition(void* base, size_t nmemb, size_t size, int (*compar)(const void
             pivotIndex = rand() % nmemb;
             break;
         case MEDIANOF3:
+            count_median += nmemb - 1;
             if (nmemb == 2) {
                 // With two elements, simply return partition based on the first element.
                 //printf("Only two elements. Selecting the first element as pivot.\n");
